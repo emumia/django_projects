@@ -1,0 +1,32 @@
+{% extends 'common_code/base.html' %}
+{% block title%} m learning {% endblock title %}
+
+{% block content %}
+<body>
+<h1>Welcome to machine learning course</h1>
+<h1>Courses teachers are {{m_courses}} </h1>
+
+
+{% for course in m_courses %}
+<p> {{course}} is our aiquest teacher</p>
+
+{% endfor%}
+
+<h1>Reversed list by for loop</h1>
+
+{% for course in m_courses reversed %}
+<h2><li>{{course}} is our aiquest teacher </li></h2>
+
+{% endfor%}
+
+</br>
+<p>forloop counter</p>
+
+{% for course in m_courses reversed %}
+{{forloop.counter}} {{course}}
+<h2><li>{{course}} is our aiquest teacher </li></h2>
+
+{% endfor%}
+
+</body>
+{% endblock content %}

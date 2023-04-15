@@ -1,0 +1,29 @@
+{% extends 'common_code/base.html' %}
+{% block title%} deep learning {% endblock title %}
+
+{% block content %}
+
+<h1>Welcome to deep learning course</h1>
+<h2>This is our {{c| upper}}</h2>
+<h3>This is our small {{c| lower}} course </h3>
+<h3>The length is {{c| capfirst}} capfirst</h3>
+<h3>The length is {{c| length}}</h3>
+
+
+<p>course name is {{c}}</p>
+<p>course fee is {{cf}} BDT</p>
+<p>course duration is {{cd}}</p>
+<p>course total class hours is {{ch}} hrs</p>
+<p>course type is {{ct}} based</p>
+<p>course will held at {{ctm}}</p>
+
+{% if cf == course_fee %}
+<p>Congratulations! you can have full access for  your {{c}} course</p>
+{% elif hlf == 2500 %}
+<p>You can have half access of the {{c}} course</p>
+{% else %}
+<p>Sorry! you cant have the access</p>
+{% endif %}
+
+{% endblock content %}
+
